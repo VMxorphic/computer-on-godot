@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk85a3jshs2ay"
-path="res://.godot/imported/search_icon.png-69ed2447d881da67ba4a7bbbc43c3ddf.ctex"
+uid="uid://br6rn8nhh1oat"
+path="res://.godot/imported/wifi_icon.png-4244a3fe461150b1f6305a824fef89f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Icons/search_icon.png"
-dest_files=["res://.godot/imported/search_icon.png-69ed2447d881da67ba4a7bbbc43c3ddf.ctex"]
+source_file="res://assets/ui/wifi_icon.png"
+dest_files=["res://.godot/imported/wifi_icon.png-4244a3fe461150b1f6305a824fef89f9.ctex"]
 
 [params]
 

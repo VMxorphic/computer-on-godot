@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br6rn8nhh1oat"
-path="res://.godot/imported/wifi_icon.png-f5af6dd53461c4166dd8550dbd212e70.ctex"
+uid="uid://c1gow11kshney"
+path="res://.godot/imported/speaker_sound_icon.png-d84ca4d1a3c9d9c396986bd935218a8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI_Icons/wifi_icon.png"
-dest_files=["res://.godot/imported/wifi_icon.png-f5af6dd53461c4166dd8550dbd212e70.ctex"]
+source_file="res://assets/ui/speaker_sound_icon.png"
+dest_files=["res://.godot/imported/speaker_sound_icon.png-d84ca4d1a3c9d9c396986bd935218a8c.ctex"]
 
 [params]
 
