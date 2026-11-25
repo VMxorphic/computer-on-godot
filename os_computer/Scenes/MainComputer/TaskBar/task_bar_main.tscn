@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://qxolsjd8ywpv"]
+
+[ext_resource type="Texture2D" uid="uid://bjxs23nkakc2y" path="res://icon.svg" id="1_ujcy5"]
+[ext_resource type="Texture2D" uid="uid://br6rn8nhh1oat" path="res://UI_Icons/wifi_icon.png" id="2_as62w"]
+[ext_resource type="Texture2D" uid="uid://ddeesq3utdhov" path="res://UI_Icons/notification_icon.png" id="2_ih850"]
+[ext_resource type="Texture2D" uid="uid://dk85a3jshs2ay" path="res://UI_Icons/search_icon.png" id="2_vs545"]
+[ext_resource type="Texture2D" uid="uid://c1gow11kshney" path="res://UI_Icons/speaker_sound_icon.png" id="3_vs545"]
+[ext_resource type="Texture2D" uid="uid://bxe1fehxrngqi" path="res://UI_Icons/battery_icon.png" id="4_880jp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whp10"]
+bg_color = Color(0.427493, 0.42749307, 0.42749295, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8yuj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twpoi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwddh"]
+
+[node name="TaskBarMain" type="Control" unique_id=926941842]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TaskBar" type="PanelContainer" parent="." unique_id=1031750095]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LeftButton" type="HBoxContainer" parent="TaskBar" unique_id=1365072299]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="WeatherButton" type="TextureButton" parent="TaskBar/LeftButton" unique_id=1384806420]
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TaskBar/LeftButton" unique_id=790184529]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "10 C
+Rain"
+
+[node name="MiddleButtons" type="HBoxContainer" parent="TaskBar" unique_id=2076323722]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="StartButton" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=227068309]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="TaskBar/MiddleButtons" unique_id=2027504971]
+custom_maximum_size = Vector2(280, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_whp10")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TaskBar/MiddleButtons/PanelContainer" unique_id=182497009]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="AppButton3" type="TextureButton" parent="TaskBar/MiddleButtons/PanelContainer/HBoxContainer" unique_id=1617483521]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_vs545")
+stretch_mode = 0
+
+[node name="SearchLine" type="LineEdit" parent="TaskBar/MiddleButtons/PanelContainer/HBoxContainer" unique_id=1962722192]
+custom_minimum_size = Vector2(250, 35)
+custom_maximum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_i8yuj")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_twpoi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwddh")
+placeholder_text = "Search"
+emoji_menu_enabled = false
+
+[node name="AppButton1" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=165165464]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="AppButton2" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=144270926]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="AppButton3" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=2129119898]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="StartButton5" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=64784082]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="StartButton6" type="TextureButton" parent="TaskBar/MiddleButtons" unique_id=502666955]
+custom_minimum_size = Vector2(35, 35)
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ujcy5")
+stretch_mode = 0
+
+[node name="RightButton" type="HBoxContainer" parent="TaskBar" unique_id=435356799]
+layout_mode = 2
+size_flags_horizontal = 8
+offset_transform_enabled = true
+theme_override_constants/separation = 8
+
+[node name="LanguageButton" type="Label" parent="TaskBar/RightButton" unique_id=1669672698]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "ENG
+US"
+horizontal_alignment = 1
+
+[node name="WifiButton" type="TextureButton" parent="TaskBar/RightButton" unique_id=1171737588]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_as62w")
+stretch_mode = 0
+
+[node name="SoundButton" type="TextureButton" parent="TaskBar/RightButton" unique_id=515452196]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_vs545")
+stretch_mode = 0
+
+[node name="Batterybutton" type="TextureButton" parent="TaskBar/RightButton" unique_id=473359542]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_880jp")
+stretch_mode = 0
+
+[node name="TimeDay" type="Label" parent="TaskBar/RightButton" unique_id=289969335]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "11:31 AM
+2026-11-24"
+horizontal_alignment = 1
+
+[node name="NotificationButton" type="TextureButton" parent="TaskBar/RightButton" unique_id=754269028]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_ih850")
+stretch_mode = 0
