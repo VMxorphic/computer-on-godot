@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcpk6v7teo7n5"]
 
-[ext_resource type="PackedScene" path="res://Scenes/MainComputer/TaskBar/task_bar_main.tscn" id="1_ivc5r"]
+[ext_resource type="PackedScene" uid="uid://qxolsjd8ywpv" path="res://scenes/main/task_bar/task_bar_main.tscn" id="1_84lny"]
+[ext_resource type="PackedScene" uid="uid://dvpddw2dkvjpr" path="res://scenes/main/home_screen/home_apps_main.tscn" id="2_l7kf7"]
 
 [node name="HomeScreenMain" type="Control" unique_id=826169619]
 layout_mode = 3
@@ -10,5 +11,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TaskBarMain" parent="." unique_id=926941842 instance=ExtResource("1_ivc5r")]
+[node name="HomeBackground" type="TextureRect" parent="." unique_id=1083582508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomeAppsMain" parent="." unique_id=1279748611 instance=ExtResource("2_l7kf7")]
+layout_mode = 1
+
+[node name="TaskBarMain" parent="." unique_id=926941842 instance=ExtResource("1_84lny")]
 layout_mode = 1

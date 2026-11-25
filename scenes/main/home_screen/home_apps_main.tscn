@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dvpddw2dkvjpr"]
+
+[ext_resource type="Texture2D" uid="uid://0niphf6f4usr" path="res://assets/ui/calculator_app_icon.jpg" id="1_equo4"]
+[ext_resource type="Texture2D" uid="uid://bjxs23nkakc2y" path="res://icon.svg" id="1_s6if1"]
+
+[node name="HomeAppsMain" type="Control" unique_id=1279748611]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AppsR1" type="VBoxContainer" parent="." unique_id=1271130309]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.056
+anchor_right = 0.034
+anchor_bottom = 0.056
+offset_left = -0.16800308
+offset_top = -0.288002
+offset_right = 59.831997
+offset_bottom = 365.712
+theme_override_constants/separation = 42
+
+[node name="TrashRecycleButton" type="TextureButton" parent="AppsR1" unique_id=1546454401]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="FilesButton" type="TextureButton" parent="AppsR1" unique_id=262311604]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="CalculatorAppButton" type="TextureButton" parent="AppsR1" unique_id=322859989]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_equo4")
+stretch_mode = 0
+
+[node name="ChattingAppButton" type="TextureButton" parent="AppsR1" unique_id=794426800]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="AppsR2" type="VBoxContainer" parent="." unique_id=1146401902]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13000001
+anchor_top = 0.056
+anchor_right = 0.13000001
+anchor_bottom = 0.056
+offset_left = 0.23999023
+offset_top = -0.288002
+offset_right = 60.23999
+offset_bottom = 161.712
+theme_override_constants/separation = 42
+
+[node name="BrowserAppButton" type="TextureButton" parent="AppsR2" unique_id=2053527362]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="StickyNoteAppButton" type="TextureButton" parent="AppsR2" unique_id=1916974085]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="AppsR3" type="VBoxContainer" parent="." unique_id=1684132530]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.919
+anchor_top = 0.056
+anchor_right = 0.919
+anchor_bottom = 0.056
+offset_left = 0.31201172
+offset_top = -0.288002
+offset_right = 60.31201
+offset_bottom = 161.712
+theme_override_constants/separation = 42
+
+[node name="GamingAppButton" type="TextureButton" parent="AppsR3" unique_id=1051195860]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
+
+[node name="PaintAppButton" type="TextureButton" parent="AppsR3" unique_id=1799037967]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_s6if1")
+stretch_mode = 0
