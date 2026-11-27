@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qxolsjd8ywpv"]
 
 [ext_resource type="Texture2D" uid="uid://bjxs23nkakc2y" path="res://icon.svg" id="1_b1ww1"]
+[ext_resource type="Script" uid="uid://bpmvnotemmse5" path="res://scripts/main/task_bar_main.gd" id="1_hge68"]
 [ext_resource type="Texture2D" uid="uid://dk85a3jshs2ay" path="res://assets/ui/search_icon.png" id="2_45or2"]
 [ext_resource type="Texture2D" uid="uid://br6rn8nhh1oat" path="res://assets/ui/wifi_icon.png" id="3_hge68"]
 [ext_resource type="Texture2D" uid="uid://c1gow11kshney" path="res://assets/ui/speaker_sound_icon.png" id="4_fpdfg"]
@@ -10,10 +11,10 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whp10"]
 bg_color = Color(0.427493, 0.42749307, 0.42749295, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8yuj"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -24,11 +25,13 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="TaskBarMain" type="Control" unique_id=926941842]
 layout_mode = 3
-anchors_preset = 15
+anchor_top = 0.924
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 0.24798584
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hge68")
 
 [node name="TaskBar" type="PanelContainer" parent="." unique_id=1031750095]
 layout_mode = 1
@@ -157,8 +160,8 @@ texture_normal = ExtResource("2_45or2")
 stretch_mode = 0
 
 [node name="SearchBar" type="LineEdit" parent="TaskBar/MiddleButtons/PanelContainer/HBoxContainer" unique_id=1962722192]
-custom_minimum_size = Vector2(250, 35)
-custom_maximum_size = Vector2(250, 40)
+custom_minimum_size = Vector2(200, 35)
+custom_maximum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_styles/normal = SubResource("StyleBoxFlat_i8yuj")
@@ -211,3 +214,5 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("1_b1ww1")
 stretch_mode = 0
+
+[connection signal="pressed" from="TaskBar/MiddleButtons/StartButton" to="." method="_on_start_button_pressed"]

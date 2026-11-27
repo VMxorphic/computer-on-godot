@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dvpddw2dkvjpr"]
 
+[ext_resource type="Script" uid="uid://bur3bg2x0oiny" path="res://scripts/main/home_apps_main.gd" id="1_0gmas"]
 [ext_resource type="Texture2D" uid="uid://0niphf6f4usr" path="res://assets/ui/calculator_app_icon.jpg" id="1_equo4"]
-[ext_resource type="Texture2D" uid="uid://bjxs23nkakc2y" path="res://icon.svg" id="1_s6if1"]
+[ext_resource type="Texture2D" uid="uid://cpxtyxrc6vc6" path="res://assets/ui/trash_recycle_app_icon.jpg" id="2_ejerh"]
+[ext_resource type="Texture2D" uid="uid://cnia0wos2xsby" path="res://assets/ui/files_app_icon.jpg" id="3_12vin"]
+[ext_resource type="Texture2D" uid="uid://c76x38odkdxjp" path="res://assets/ui/chatting_app_icon.jpg" id="5_tddoq"]
+[ext_resource type="Texture2D" uid="uid://ncls3swsf6v0" path="res://assets/ui/browser_app_icon.jpg" id="6_tddoq"]
+[ext_resource type="Texture2D" uid="uid://bhaiglau2bp7a" path="res://assets/ui/sticky_note_app_icon.jpg" id="7_uacdy"]
+[ext_resource type="Texture2D" uid="uid://bdxbyw3gj40fm" path="res://assets/ui/gaming_app_icon.jpg" id="8_uacdy"]
+[ext_resource type="Texture2D" uid="uid://mcdluhjduwab" path="res://assets/ui/paint_app_icon.jpg" id="9_oa75n"]
 
 [node name="HomeAppsMain" type="Control" unique_id=1279748611]
 layout_mode = 3
@@ -10,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0gmas")
 
 [node name="AppsR1" type="VBoxContainer" parent="." unique_id=1271130309]
 layout_mode = 1
@@ -25,31 +33,31 @@ offset_bottom = 365.712
 theme_override_constants/separation = 42
 
 [node name="TrashRecycleButton" type="TextureButton" parent="AppsR1" unique_id=1546454401]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("2_ejerh")
 stretch_mode = 0
 
 [node name="FilesButton" type="TextureButton" parent="AppsR1" unique_id=262311604]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("3_12vin")
 stretch_mode = 0
 
 [node name="CalculatorAppButton" type="TextureButton" parent="AppsR1" unique_id=322859989]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("1_equo4")
 stretch_mode = 0
 
 [node name="ChattingAppButton" type="TextureButton" parent="AppsR1" unique_id=794426800]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("5_tddoq")
 stretch_mode = 0
 
 [node name="AppsR2" type="VBoxContainer" parent="." unique_id=1146401902]
@@ -66,17 +74,17 @@ offset_bottom = 161.712
 theme_override_constants/separation = 42
 
 [node name="BrowserAppButton" type="TextureButton" parent="AppsR2" unique_id=2053527362]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("6_tddoq")
 stretch_mode = 0
 
 [node name="StickyNoteAppButton" type="TextureButton" parent="AppsR2" unique_id=1916974085]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("7_uacdy")
 stretch_mode = 0
 
 [node name="AppsR3" type="VBoxContainer" parent="." unique_id=1684132530]
@@ -93,15 +101,24 @@ offset_bottom = 161.712
 theme_override_constants/separation = 42
 
 [node name="GamingAppButton" type="TextureButton" parent="AppsR3" unique_id=1051195860]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("8_uacdy")
 stretch_mode = 0
 
 [node name="PaintAppButton" type="TextureButton" parent="AppsR3" unique_id=1799037967]
-custom_minimum_size = Vector2(60, 60)
-custom_maximum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("1_s6if1")
+texture_normal = ExtResource("9_oa75n")
 stretch_mode = 0
+
+[connection signal="pressed" from="AppsR1/TrashRecycleButton" to="." method="_on_trash_recycle_button_pressed"]
+[connection signal="pressed" from="AppsR1/FilesButton" to="." method="_on_files_button_pressed"]
+[connection signal="pressed" from="AppsR1/CalculatorAppButton" to="." method="_on_calculator_app_button_pressed"]
+[connection signal="pressed" from="AppsR1/ChattingAppButton" to="." method="_on_chatting_app_button_pressed"]
+[connection signal="pressed" from="AppsR2/BrowserAppButton" to="." method="_on_browser_app_button_pressed"]
+[connection signal="pressed" from="AppsR2/StickyNoteAppButton" to="." method="_on_sticky_note_app_button_pressed"]
+[connection signal="pressed" from="AppsR3/GamingAppButton" to="." method="_on_gaming_app_button_pressed"]
+[connection signal="pressed" from="AppsR3/PaintAppButton" to="." method="_on_paint_app_button_pressed"]

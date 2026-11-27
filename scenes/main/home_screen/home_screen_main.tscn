@@ -1,7 +1,26 @@
-[gd_scene format=3 uid="uid://dcpk6v7teo7n5"]
+[gd_scene format=3 uid="uid://cj315heoug1aj"]
 
 [ext_resource type="PackedScene" uid="uid://qxolsjd8ywpv" path="res://scenes/main/task_bar/task_bar_main.tscn" id="1_84lny"]
+[ext_resource type="Texture2D" uid="uid://m4t7dwy7ikea" path="res://assets/backgrounds/homebackground.jpg" id="1_a6e8c"]
 [ext_resource type="PackedScene" uid="uid://dvpddw2dkvjpr" path="res://scenes/main/home_screen/home_apps_main.tscn" id="2_l7kf7"]
+[ext_resource type="Script" uid="uid://vqpvxkgsacqj" path="res://scripts/main/search_start_panel.gd" id="3_5jlfb"]
+[ext_resource type="Texture2D" uid="uid://bjxs23nkakc2y" path="res://icon.svg" id="3_7melx"]
+[ext_resource type="Texture2D" uid="uid://q8kvmxwbau0j" path="res://assets/ui/start_icon.png" id="4_qvdya"]
+[ext_resource type="Texture2D" uid="uid://dk85a3jshs2ay" path="res://assets/ui/search_icon.png" id="6_87ijn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuyar"]
+bg_color = Color(0.427493, 0.42749307, 0.42749295, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nx0f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avpit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0r8kr"]
 
 [node name="HomeScreenMain" type="Control" unique_id=826169619]
 layout_mode = 3
@@ -18,9 +37,316 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_a6e8c")
 
 [node name="HomeAppsMain" parent="." unique_id=1279748611 instance=ExtResource("2_l7kf7")]
 layout_mode = 1
+offset_left = -8.0
+offset_right = -8.0
+
+[node name="SearchStartPanel" type="Panel" parent="." unique_id=1856506321]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 64.0
+offset_right = 856.0
+offset_bottom = 592.0
+script = ExtResource("3_5jlfb")
+
+[node name="UserStartPanel" type="Panel" parent="SearchStartPanel" unique_id=1517282504]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 560.0
+offset_bottom = 528.0
+
+[node name="LeftButtons" type="HBoxContainer" parent="SearchStartPanel/UserStartPanel" unique_id=203274485]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 142.0
+offset_bottom = 43.0
+size_flags_horizontal = 0
+theme_override_constants/separation = 17
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/UserStartPanel/LeftButtons" unique_id=1213530666]
+custom_maximum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UsernameLabel" type="Label" parent="SearchStartPanel/UserStartPanel/LeftButtons" unique_id=573678842]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Username"
+
+[node name="StartShutdownButton" type="TextureButton" parent="SearchStartPanel/UserStartPanel" unique_id=1636586938]
+custom_maximum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 488.0
+offset_top = 8.0
+offset_right = 523.0
+offset_bottom = 43.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_qvdya")
+stretch_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="SearchStartPanel" unique_id=675922930]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.652
+anchor_right = 0.2
+anchor_bottom = 0.652
+offset_top = -0.25601196
+offset_right = 333.0
+offset_bottom = 119.74399
+theme_override_constants/h_separation = 135
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SearchStartPanel/GridContainer" unique_id=72437322]
+layout_mode = 2
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/GridContainer/HBoxContainer" unique_id=1355082324]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UsernameLabel" type="Label" parent="SearchStartPanel/GridContainer/HBoxContainer" unique_id=335206144]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Username"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SearchStartPanel/GridContainer" unique_id=1765804723]
+layout_mode = 2
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/GridContainer/HBoxContainer2" unique_id=182965676]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UsernameLabel" type="Label" parent="SearchStartPanel/GridContainer/HBoxContainer2" unique_id=1183198549]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Username"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SearchStartPanel/GridContainer" unique_id=1559336606]
+layout_mode = 2
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/GridContainer/HBoxContainer3" unique_id=1451478237]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UsernameLabel" type="Label" parent="SearchStartPanel/GridContainer/HBoxContainer3" unique_id=438205629]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Username"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SearchStartPanel/GridContainer" unique_id=2081392590]
+layout_mode = 2
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/GridContainer/HBoxContainer4" unique_id=132825500]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UsernameLabel" type="Label" parent="SearchStartPanel/GridContainer/HBoxContainer4" unique_id=1613762116]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Username"
+
+[node name="GridContainer2" type="GridContainer" parent="SearchStartPanel" unique_id=1733404602]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.157
+anchor_top = 0.333
+anchor_right = 0.157
+anchor_bottom = 0.333
+offset_left = 0.0799942
+offset_top = 0.17599487
+offset_right = 390.08
+offset_bottom = 118.175995
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 28
+columns = 6
+
+[node name="UserIconButton" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1284070690]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton2" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1097157655]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton3" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=647168838]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton4" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1357717197]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton5" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=216808840]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton6" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=485990926]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton7" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1944337233]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton8" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=374855367]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton9" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=2053202612]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton10" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1756470826]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton11" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=1412557611]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="UserIconButton12" type="TextureButton" parent="SearchStartPanel/GridContainer2" unique_id=967715241]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7melx")
+stretch_mode = 0
+
+[node name="SearchBar" type="Panel" parent="SearchStartPanel" unique_id=320433609]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 52.0
+
+[node name="PanelContainer" type="PanelContainer" parent="SearchStartPanel/SearchBar" unique_id=2045903265]
+custom_maximum_size = Vector2(280, 40)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 8.0
+offset_right = 422.0
+offset_bottom = 43.0
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_uuyar")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SearchStartPanel/SearchBar/PanelContainer" unique_id=1165964069]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="AppButton3" type="TextureButton" parent="SearchStartPanel/SearchBar/PanelContainer/HBoxContainer" unique_id=1577424330]
+custom_minimum_size = Vector2(30, 30)
+custom_maximum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("6_87ijn")
+stretch_mode = 0
+
+[node name="SearchBar" type="LineEdit" parent="SearchStartPanel/SearchBar/PanelContainer/HBoxContainer" unique_id=937987112]
+custom_minimum_size = Vector2(200, 35)
+custom_maximum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_4nx0f")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_avpit")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0r8kr")
+placeholder_text = "Search"
+emoji_menu_enabled = false
+
+[node name="Panel2" type="Panel" parent="." unique_id=570190614]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 424.0
+offset_bottom = 592.0
+
+[node name="Panel4" type="Panel" parent="." unique_id=1200335500]
+visible = false
+layout_mode = 0
+offset_left = 800.0
+offset_top = 264.0
+offset_right = 1144.0
+offset_bottom = 592.0
+
+[node name="Panel3" type="Panel" parent="." unique_id=1964651503]
+visible = false
+layout_mode = 0
+offset_left = 800.0
+offset_top = 264.0
+offset_right = 1144.0
+offset_bottom = 592.0
 
 [node name="TaskBarMain" parent="." unique_id=926941842 instance=ExtResource("1_84lny")]
 layout_mode = 1
+
+[connection signal="pressed" from="SearchStartPanel/UserStartPanel/LeftButtons/UserIconButton" to="." method="_on_user_icon_button_pressed"]
+[connection signal="pressed" from="SearchStartPanel/UserStartPanel/StartShutdownButton" to="." method="_on_start_shutdown_button_pressed"]
